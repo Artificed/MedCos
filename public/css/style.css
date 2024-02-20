@@ -1,0 +1,26 @@
+.theme-blue {
+    background-color: #005AAB;
+}
+.theme-grey {
+    background-color: #EEEEEE;
+}
+.selected-grey {
+    background-color: #DDDDDD;
+}
+@font-face {
+    font-family: 'Doppio-One';
+    src: url('../fonts/DoppioOne-Regular.ttf') format('truetype');
+}
+* {
+    font-family: 'Doppio-One', sans-serif;
+}
+.hidden {
+    display: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
