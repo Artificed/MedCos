@@ -9,7 +9,7 @@
     <div class="pt-32 ml-5">
 
         <h1 class="text-xl mb-2">Produk Terbaru</h1>
-        <div class="border-t border-t-black flex overflow-scroll no-scrollbar">
+        <div class="border-t border-t-black flex overflow-scroll no-scrollbar"> 
             @foreach ($new_products as $new_product)
                 <div class="w-48 lg:w-72 mr-8">
                     <x-product :product="$new_product"/>
