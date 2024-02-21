@@ -37,6 +37,11 @@ class ProductController extends Controller
 
     public function getCategoryPage($category_name) {
         $category = Category::where('name', 'LIKE', $category_name)->first();
+
+        if(!$category) {
+            return view('notfound');
+        }
+
         $products = $category->Product()->get();
 
         return view('search', ['products' => $products]);
@@ -45,10 +50,18 @@ class ProductController extends Controller
     public function getProductPage($product_name) {
         $product = Product::where('name', 'LIKE', $product_name)->first();
 
+        if(!$product) {
+            return view('notfound');
+        }
+
         $product_images = $product->ProductImage()->get();
 
         $best_sellers = $this->getBestSellingProducts();
 
         return view('productDetail', ['product' => $product, 'product_images' => $product_images, 'best_sellers' => $best_sellers]);
+    }
+
+    public function getNotFoundPage() {
+        return view('notfound');
     }
 }

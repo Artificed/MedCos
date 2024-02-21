@@ -14,10 +14,6 @@ class HomeController extends Controller
         $new_products = $productController->getNewestProducts();
         $best_sellers = $productController->getBestSellingProducts();
 
-        if(Auth::user()) {
-            return view('home', ['new_products' => $new_products, 'best_sellers' => $best_sellers]);
-        } else {
-            return redirect()->route('LoginPage');
-        }
+        return view('home', ['new_products' => $new_products, 'best_sellers' => $best_sellers]);
     }
 }

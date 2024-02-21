@@ -42,7 +42,7 @@
             </div>
             <div id="profile-section" class="hidden">
                 <x-sidebar_button id="profile" text="Profile" onclick="window.location.href='{{ route('ProfilePage') }}'"/>
-                <x-sidebar_button id="sign-out" text="Sign Out" onclick="window.location.href='{{ route('LoginPage') }}'"/>
+                <x-sidebar_button id="sign-out" text="Sign Out" onclick="window.location.href='{{ route('Logout') }}'"/>
             </div>
         </div>
     </div>
